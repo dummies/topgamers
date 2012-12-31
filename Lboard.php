@@ -8,6 +8,13 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
 <link href="images.css" rel="stylesheet" type="text/css">
+<style>
+.goup {
+	position:relative;
+	top:-30px;
+}
+
+</style>
 </head>
 
 <body>
@@ -56,9 +63,9 @@
 			echo "<th>".$registrant['Name']."</th>";
             echo "<th><th>".$registrant['Score']."</th></th></tr>";*/
 			$tmp = "https://graph.facebook.com/".$registrant['id']."/picture?type=large";
-			echo "<img src='$tmp'> height='200' width='200'";
-			echo "<label>".$registrant['name']."</label>";
-			echo "<label> Score:".$registrant['score']."</label>";
+			echo "<img src='$tmp' height='200' width='200'>";
+			echo "<label class='goup'>".$registrant['name']."</label></br>";
+			echo "<label class='goup'> Score:".$registrant['score']."</label>";
 			echo "</div></div>";
 			}
 			$i++;
