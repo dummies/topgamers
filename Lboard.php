@@ -56,7 +56,7 @@
 			echo "<th>".$registrant['Name']."</th>";
             echo "<th><th>".$registrant['Score']."</th></th></tr>";*/
 			$tmp = "https://graph.facebook.com/".$registrant['id']."/picture?type=large";
-			echo "<img src='$tmp'>";
+			echo "<img src='$tmp'> height=200 width=200";
 			echo "</div></div>";
 			}
 			$i++;
