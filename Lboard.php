@@ -7,23 +7,11 @@
 <script src="/js/modernizr.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
-<style>
-.container {
-	width:720px;
-}
-.panel {
-	float:left;
-	height:200px;
-	widows:200px;
-	margin:20px;
-	position:relative;
-}
-
-</style>
-
+<link href="images.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
+
 
 
 <!--<script type="text/javascript">
@@ -63,13 +51,13 @@
 			//var_dump($registrant);
 			if($i < 8)	
 			{
-			echo "<div class='panel'>";
+			echo "<div class='panel'><div class='hover'>";
             /*echo "<tr><th>".$i."</th>";
 			echo "<th>".$registrant['Name']."</th>";
             echo "<th><th>".$registrant['Score']."</th></th></tr>";*/
 			$tmp = "https://graph.facebook.com/".$registrant['id']."/picture";
 			echo "<img src='$tmp'>";
-			echo "/div>";
+			echo "</div></div>";
 			}
 			$i++;
         }
