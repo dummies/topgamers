@@ -136,7 +136,7 @@
 			}
 			$i++;
         }
-        echo "</table>";
+        echo "</div>";
     } 
 	else
 	{
