@@ -3,6 +3,7 @@
 
 #container {
 			width: 720px;
+			height: 500px;
 		}
 		.panel {
 			float: left;
@@ -11,7 +12,13 @@
 			margin: -20px;
 			position: relative;
 		}
-		
+		.panel1 {
+			float: left;
+			width: 200px;
+			height: 200px;
+			margin: +20px;
+			position: relative;
+		}
 		/* -- make sure to declare a default for every property that you want animated -- */
 		.panel .hover {
 			float: none;
