@@ -23,6 +23,7 @@
 	FB.getLoginStatus(function(response) {
   if (response.status === 'connected') {
     // connected
+	window.location.href = "game.html";
   } else if (response.status === 'not_authorized') {
     // not_authorized
   } else {
@@ -44,6 +45,7 @@ function login() {
     FB.login(function(response) {
         if (response.authResponse) {
             // connected
+			window.location.href = "game.html";
         } else {
             // cancelled
         }
