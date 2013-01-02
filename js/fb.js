@@ -1,7 +1,7 @@
  window.fbAsyncInit = function() {
     // init the FB JS SDK
     FB.init({
-      appId      : '102517019918875', // App ID from the App Dashboard
+      appId      : '361978317232858', // App ID from the App Dashboard
       channelUrl : 'http://word-addiction.azurewebsites.net/game.html', // Channel File for x-domain communication
       status     : true, // check the login status upon init?
       cookie     : true, // set sessions cookies to allow your server to access the session?
@@ -69,7 +69,7 @@ function logoutUser() {
 }
 function updateUserInfo(response) 
 {
-	   console.log(response);
+	  // console.log(response);
      FB.api('/me', function(response) {
        //document.getElementById('user-info').innerHTML = '<img src="https://graph.facebook.com/' + response.id + '/picture">' + 'hello ' + response.name;
        //document.getElementById('user_photo').innerHTML = '<img src="https://graph.facebook.com/' + response.id + '/picture">';
