@@ -58,6 +58,7 @@ function loginCheck() {
 	}
 	else {
 		login();
+		loginCheck();
 	}
 }
 function loginUser() {    
