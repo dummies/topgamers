@@ -70,6 +70,7 @@
 	$cnt =count($registrants) ;
 	$pushintodb = true;
     if($cnt > 8) {
+		echo $registrants[cnt-1]['score'];
 		if($registrants[cnt-1]['score'] > $score)
 		 $pushintodb = false;
 	}
