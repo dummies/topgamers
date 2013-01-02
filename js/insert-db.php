@@ -1,3 +1,4 @@
+<pre>
 <?php
     ignore_user_abort(true);
 	/*used to insert data into leader board.*/
@@ -65,7 +66,7 @@
 	$sql_select = "SELECT * FROM leaderboard order by Score desc";
     $stmt = $conn->query($sql_select);
     $registrants = $stmt->fetchAll(); 
-	//var_dump($registrants);
+	print_r($registrants);
 	//echo "<br/> I am fetching <br/> ";
 	$cnt =count($registrants) ;
 	$pushintodb = true;
@@ -96,3 +97,4 @@
 	}
 	echo "<br/>inserted into leaderbaord";
 ?>
+</pre>
