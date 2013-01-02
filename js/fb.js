@@ -25,6 +25,8 @@
   if (response.status === 'connected') {
     // connected
 	//window.location.href = "game.html";
+	if(window.location.href == "index.php" && clicked)
+			window.location.href = "game.html";
   } else if (response.status === 'not_authorized') {
     // not_authorized
   } else {
@@ -46,8 +48,7 @@ function login() {
     FB.login(function(response) {
         if (response.authResponse) {
             // connected
-		if(window.location.href == "index.php" && clicked)
-			window.location.href = "game.html";
+		
         } else {
             // cancelled
         }
@@ -56,7 +57,7 @@ function login() {
 
 function loginCheck() {
 	clicked =true;
-	login();
+	FB.getLoginStatus();
 }
 function loginUser() {    
      FB.login(function(response) { }, {scope:'email'});     
