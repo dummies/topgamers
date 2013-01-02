@@ -1,4 +1,4 @@
- var readytogo =false;
+ var readytogo =false,clicked =false;
  window.fbAsyncInit = function() {
     // init the FB JS SDK
     FB.init({
@@ -44,7 +44,9 @@ function testAPI() {
 function login() {
     FB.login(function(response) {
         if (response.authResponse) {
-            // connected
+            // connected 
+			if(clicked ) 
+			loginCheck();
 		
         } else {
             // cancelled
@@ -53,12 +55,13 @@ function login() {
 }
 
 function loginCheck() {
+	clicked =true;
 	if(readytogo) {
 		window.location.href = "game.html";
 	}
 	else {
 		login();
-		loginCheck();
+		//loginCheck();
 	}
 }
 function loginUser() {    
