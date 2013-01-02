@@ -1,4 +1,4 @@
- var clicked =false;
+ var readytogo =false;
  window.fbAsyncInit = function() {
     // init the FB JS SDK
     FB.init({
@@ -24,9 +24,6 @@
 	FB.getLoginStatus(function(response) {
   if (response.status === 'connected') {
     // connected
-	//window.location.href = "game.html";
-	if(window.location.href == "index.php" && clicked)
-			window.location.href = "game.html";
   } else if (response.status === 'not_authorized') {
     // not_authorized
   } else {
@@ -56,8 +53,12 @@ function login() {
 }
 
 function loginCheck() {
-	clicked =true;
-	FB.getLoginStatus();
+	if(readytogo) {
+		window.location.href = "game.html";
+	}
+	else {
+		login();
+	}
 }
 function loginUser() {    
      FB.login(function(response) { }, {scope:'email'});     
@@ -79,6 +80,7 @@ function updateUserInfo(response)
 {
 	  // console.log(response);
      FB.api('/me', function(response) {
+		 readytogo =true;
        //document.getElementById('user-info').innerHTML = '<img src="https://graph.facebook.com/' + response.id + '/picture">' + 'hello ' + response.name;
        //document.getElementById('user_photo').innerHTML = '<img src="https://graph.facebook.com/' + response.id + '/picture">';
 	   name = response.name;
